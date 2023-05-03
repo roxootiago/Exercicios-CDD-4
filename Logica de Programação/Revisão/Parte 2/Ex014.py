@@ -7,5 +7,7 @@ num2 = int(input("Digite outro número: "))
 
 if num1 > num2:
     print(num2,num1)
-else:
+elif num2 > num1:
     print(num1,num2)
+else:
+    print("Digite números diferentes")
