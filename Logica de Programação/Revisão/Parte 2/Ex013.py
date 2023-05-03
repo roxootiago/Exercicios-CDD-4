@@ -1,5 +1,5 @@
 # Escreva um algoritmo par ler uma temperatura
-# em graus Fahrenheit, calcualar e escrever o
+# em graus Fahrenheit, calcular e escrever o
 # valor correspondente em graus Celsius (
 # baseado na fórmula abaixo): C = ((F-32)/9)*5
 # Observação: Para testar se a sua resposta
