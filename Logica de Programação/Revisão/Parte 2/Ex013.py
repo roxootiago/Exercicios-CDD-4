@@ -1,4 +1,4 @@
-# Escreva um algoritmo par ler uma temperatur
+# Escreva um algoritmo par ler uma temperatura
 # em graus Fahrenheit, calcualar e escrever o
 # valor correspondente em graus Celsius (
 # baseado na fórmula abaixo): C = ((F-32)/9)*5
