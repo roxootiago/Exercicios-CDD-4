@@ -1,33 +1,39 @@
 from random import choice
 
-def game():
-    champs = ["KATARINA","AMUMU", "ZED"]
-    lista = []
 
-    print("---x--- JOGO DA FORCA ---x---")
-    print("--- ADVINHE O NOME DO CHAMP ---")
+def game2():
 
-    champsRand = choice(champs)
+    def continuar():
+        continuarGame = input("Você deseja continuar jogando? ").upper()
+        if continuarGame == "S" or continuarGame == "SIM":
+            game2()
+        else:
+            print("Encerrando jogo...")
 
-    # letras = len(champsRand)
     def tentativa():
         tentar = input("\nVocê já sabe a resposta? ").upper()
 
-        if tentar == "S":
+        if tentar == "S" or tentar == "SIM":
             champTentativa = input("Digite sua tentativa: ").upper()
             if champTentativa == champsRand:
                 print(f"Parabéns! Você acertou!\nSeu chute: {champTentativa}")
+                continuar()
             else:
                 print("Você errou! Tente novamente")
-                tentativa()
+                game2()
         else:
-            print("Ok")
+            continuar()
 
+    champs = ["KATARINA", "AMUMU", "ZED"]
+    lista = []
+
+    champsRand = choice(champs)
     count = 0
+
     for i in champsRand:
         count += 1
 
-    print(f"O campeão tem {count} letras")
+    print(f"\nO campeão tem {count} letras")
     for k in range(count):
         lista.append("_")
 
@@ -45,4 +51,8 @@ def game():
         print(lista[p], end=" ")
     tentativa()
 
-game()
+
+print(" ---x--- JOGO DA FORCA ---x---")
+print("--- ADIVINHE O NOME DO CHAMP ---")
+
+game2()
