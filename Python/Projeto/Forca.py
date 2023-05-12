@@ -15,7 +15,7 @@ def Forca():
         if tentar == "S" or tentar == "SIM":
             champTentativa = input("Digite sua tentativa: ").upper()
             if champTentativa == champsRand:
-                print(f"Parabéns! Você acertou!\nCampeão selecionado:: {champsRand} - {titleChamps().capitalize()}")
+                print(f"Parabéns! Você acertou!\nCampeão selecionado:: {champsRand}: {titleChamps().capitalize()}")
                 continuar()
             else:
                 print(champTentativa)
