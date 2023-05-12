@@ -18,19 +18,21 @@ def game2():
                 print(f"Parabéns! Você acertou!\nSeu chute: {champTentativa}")
                 continuar()
             else:
+                print(champTentativa)
                 print("Você errou! Tente novamente")
                 game2()
         else:
             continuar()
 
-    champsRand = champs()
+    champ = champs()
+    champsRand = champ.upper()
     lista = []
     count = 0
 
     for i in champsRand:
-        count+=1
+        count += 1
     print(champsRand)
-    print(f"\nO campeão tem {len(champsRand)} letras")
+    print(f"\nO campeão tem {count} letras")
     for k in range(count):
         lista.append("_")
 
