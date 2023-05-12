@@ -25,7 +25,7 @@ def Forca():
             continuar()
 
     champsRand = nameChampion().upper()
-    lista = []
+    emptyList = []
     count = 0
 
     print(" ---x--- JOGO DA FORCA ---x---")
@@ -36,20 +36,20 @@ def Forca():
     #print(champsRand)
     print(f"\nDica: {titleChamps().capitalize()}\nO campeão tem {count} letras")
     for k in range(count):
-        lista.append("_")
+        emptyList.append("_")
 
     for y in range(count):
-        print(lista[y], end=" ")
+        print(emptyList[y], end=" ")
     print()
 
-    letra = input("Digite uma letra: ").upper()
+    kick = input("Digite uma letra: ").upper()
 
     for z in range(count):
-        if champsRand[z] == letra:
-            lista[z] = letra
+        if champsRand[z] == kick:
+            emptyList[z] = kick
 
     for p in range(count):
-        print(lista[p], end=" ")
+        print(emptyList[p], end=" ")
     tentativa()
 
 

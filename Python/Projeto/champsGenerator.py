@@ -8,17 +8,17 @@ def champs():
     return random_champion
 
 
-campeao = champs()
+champ = champs()
 
 
 def titleChamps():
-    title = campeao.title
+    title = champ.title
     return title
 
 
 def nameChampion():
-    nomeCampeao = campeao.name
-    return nomeCampeao
+    namChamp = champ.name
+    return namChamp
 
 
 
