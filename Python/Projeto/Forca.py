@@ -1,8 +1,7 @@
-from random import choice
+from champsGenerator import champs
 
 
 def game2():
-
     def continuar():
         continuarGame = input("Você deseja continuar jogando? ").upper()
         if continuarGame == "S" or continuarGame == "SIM":
@@ -24,16 +23,14 @@ def game2():
         else:
             continuar()
 
-    champs = ["KATARINA", "AMUMU", "ZED"]
+    champsRand = champs()
     lista = []
-
-    champsRand = choice(champs)
     count = 0
 
     for i in champsRand:
-        count += 1
-
-    print(f"\nO campeão tem {count} letras")
+        count+=1
+    print(champsRand)
+    print(f"\nO campeão tem {len(champsRand)} letras")
     for k in range(count):
         lista.append("_")
 
