@@ -1,11 +1,11 @@
-from champsGenerator import champs
+from champsGenerator import nameChampion,titleChamps
 
 
-def game2():
+def Forca():
     def continuar():
         continuarGame = input("Você deseja continuar jogando? ").upper()
         if continuarGame == "S" or continuarGame == "SIM":
-            game2()
+            Forca()
         else:
             print("Encerrando jogo...")
 
@@ -15,24 +15,26 @@ def game2():
         if tentar == "S" or tentar == "SIM":
             champTentativa = input("Digite sua tentativa: ").upper()
             if champTentativa == champsRand:
-                print(f"Parabéns! Você acertou!\nSeu chute: {champTentativa}")
+                print(f"Parabéns! Você acertou!\nCampeão selecionado:: {champsRand} - {titleChamps().capitalize()}")
                 continuar()
             else:
                 print(champTentativa)
                 print("Você errou! Tente novamente")
-                game2()
+                Forca()
         else:
             continuar()
 
-    champ = champs()
-    champsRand = champ.upper()
+    champsRand = nameChampion().upper()
     lista = []
     count = 0
 
+    print(" ---x--- JOGO DA FORCA ---x---")
+    print("--- ADIVINHE O NOME DO CHAMP ---")
+
     for i in champsRand:
         count += 1
-    print(champsRand)
-    print(f"\nO campeão tem {count} letras")
+    #print(champsRand)
+    print(f"\nDica: {titleChamps().capitalize()}\nO campeão tem {count} letras")
     for k in range(count):
         lista.append("_")
 
@@ -51,7 +53,4 @@ def game2():
     tentativa()
 
 
-print(" ---x--- JOGO DA FORCA ---x---")
-print("--- ADIVINHE O NOME DO CHAMP ---")
-
-game2()
+Forca()
