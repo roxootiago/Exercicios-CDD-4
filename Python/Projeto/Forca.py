@@ -22,7 +22,8 @@ def Forca():
                 print("Você errou! Tente novamente")
                 Forca()
         else:
-            continuar()
+            jogar()
+            tentativa()
 
     champsRand = nameChampion().upper()
     emptyList = []
@@ -33,7 +34,7 @@ def Forca():
 
     for i in champsRand:
         count += 1
-    #print(champsRand)
+    print(champsRand)
     print(f"\nDica: {titleChamps().capitalize()}\nO campeão tem {count} letras")
     for k in range(count):
         emptyList.append("_")
@@ -42,14 +43,16 @@ def Forca():
         print(emptyList[y], end=" ")
     print()
 
-    kick = input("Digite uma letra: ").upper()
+    def jogar():
+        kick = input("Digite uma letra: ").upper()
 
-    for z in range(count):
-        if champsRand[z] == kick:
-            emptyList[z] = kick
+        for z in range(count):
+            if champsRand[z] == kick:
+                emptyList[z] = kick
 
-    for p in range(count):
-        print(emptyList[p], end=" ")
+        for p in range(count):
+            print(emptyList[p], end=" ")
+    jogar()
     tentativa()
 
 

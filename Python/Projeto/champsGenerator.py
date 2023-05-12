@@ -19,6 +19,3 @@ def titleChamps():
 def nameChampion():
     namChamp = champ.name
     return namChamp
-
-
-
